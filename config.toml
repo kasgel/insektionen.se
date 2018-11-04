@@ -1,0 +1,40 @@
+baseURL = "http://new.insektionen.se"
+languageCode = "sv-SE"
+title = "Insektionen"
+theme = "insektionen"
+
+# Image processing
+resampleFilter = "box"
+quality = 75
+anchor = "smart"
+
+[menu]
+  [[menu.main]]
+    name = "Sektionen"
+    identifier = "sektionen"
+    url = "/sektionen/"
+    weight = 10
+
+  [[menu.main]]
+    name = "För studenter"
+    identifier = "for-studenter"
+    url = "/for-studenter/"
+    weight = 20
+
+  [[menu.main]]
+    name = "Kalender"
+    identifier = "kalender"
+    url = "/kalender/"
+    weight = 30
+
+  [[menu.main]]
+    name = "För Alumni"
+    identifier = "for-alumni"
+    url = "/for-alumni/"
+    weight = 40
+
+  [[menu.main]]
+    name = "För Företag"
+    identifier = "for-foretag"
+    url = "/for-foretag/"
+    weight = 50

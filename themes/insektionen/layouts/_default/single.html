@@ -1,0 +1,15 @@
+{{ partial "header.html" . }}
+    <div class="container-fluid bg-2 text-center" style="box-shadow: 0px 0px 20px 1px  #000; height: 150px;">
+        <br />
+        <br />
+        <br />
+        <h1>{{.Title}}</h1>
+    </div>
+    <div class="container" id="main" style="padding-top:50px;min-height: 400px">
+        <div class="row">
+            <div class="col-md-8 col-centered">
+                    {{ partial "markdownExtension.html" . }}
+            </div>
+        </div>
+    </div>
+{{ partial "footer.html" . }}

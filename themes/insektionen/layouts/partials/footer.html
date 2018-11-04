@@ -1,0 +1,58 @@
+        <!-- Add Google Maps -->
+        <div id="googleMap"></div>
+        <script>
+            function myMap() {
+                var myCenter = new google.maps.LatLng(59.404931, 17.950892);
+                var mapProp = {
+                    center: myCenter,
+                    zoom: 15,
+                    scrollwheel: false,
+                    draggable: false,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                };
+                var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+                var marker = new google.maps.Marker({
+                    position: myCenter
+                });
+                marker.setMap(map);
+            }
+
+        </script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBPUk_yEdNQ3erC47EMLKgqCIsLTzVPr5Y&callback=myMap"></script>
+        <footer class="container-fluid bg-2 text-center" style="heigth: 200px;">
+            <br>
+            <h3>Kontaktinfo</h3>
+            <br>
+            <div class="col-sm-3"></div>
+            <div class="col-sm-3">
+                <br>
+                <p>
+                    Sektionen för Informations- och Nanoteknik <br> Electrum 210 <br> 164 40 Kista
+                </p>
+                <p>
+                    <b>Besöksadress:</b> Electrum, Kistagången 16, Kista <br>
+                    <b>Leveranser:</b> Isafjordsgatan 18, Kista
+                </p>
+                <br>
+            </div>
+            <div class="col-sm-3">
+                <p>
+                    <b>Ordförande:</b> Patrik Karlstén <br>
+                    <b>E-post:</b> <a href="mailto:ordf@insektionen.se">ordf@insektionen.se</a>
+                </p>
+                <p>
+                    <b>Kommunikationsansvarig:</b> Erik Pettersson <br> E-post: <a href="mailto:kommunikation@insektionen.se">kommunikation@insektionen.se</a>
+                </p>
+                <p>
+                    <b>Näringslivsansvarig:</b> Celine Mileikowsky <br>
+                    <b>E-post:</b> <a href="mailto:naringsliv@insektionen.se">naringsliv@insektionen.se</a>
+                </p>
+                <br>
+            </div>
+            <div class="col-sm-3"></div>
+            <br>
+            <br>
+            
+        </footer>
+    </body>
+</html>

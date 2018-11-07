@@ -1,4 +1,4 @@
-baseURL = "http://new.insektionen.se"
+baseURL = "https://insektionen.kasgel.fi"
 languageCode = "sv-SE"
 theme = "insektionen"
 title = "Insektionen"

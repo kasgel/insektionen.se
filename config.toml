@@ -1,40 +1,85 @@
 baseURL = "http://new.insektionen.se"
 languageCode = "sv-SE"
-title = "Insektionen"
 theme = "insektionen"
+title = "Insektionen"
+copyright = "IN-sektionen"
 
 # Image processing
 resampleFilter = "box"
 quality = 75
 anchor = "smart"
 
-[menu]
-  [[menu.main]]
-    name = "Sektionen"
-    identifier = "sektionen"
-    url = "/sektionen/"
-    weight = 10
+# Multilingual mode
+DefaultContentLanguage = "sv"
+[languages]
+  [languages.sv]
+    title = "IN-Sektionen"
+    languageName = "Svenska"
+    weight = 1
+    contentDir = "content/swedish"
 
-  [[menu.main]]
-    name = "För studenter"
-    identifier = "for-studenter"
-    url = "/for-studenter/"
-    weight = 20
+    [[languages.sv.menu.main]]
+      name = "Sektionen"
+      identifier = "sektionen"
+      url = "/sektionen/"
+      weight = 10
 
-  [[menu.main]]
-    name = "Kalender"
-    identifier = "kalender"
-    url = "/kalender/"
-    weight = 30
+    [[languages.sv.menu.main]]
+      name = "För studenter"
+      identifier = "for-studenter"
+      url = "/for-studenter/"
+      weight = 20
 
-  [[menu.main]]
-    name = "För Alumni"
-    identifier = "for-alumni"
-    url = "/for-alumni/"
-    weight = 40
+    [[languages.sv.menu.main]]
+      name = "Kalender"
+      identifier = "kalender"
+      url = "/kalender/"
+      weight = 30
 
-  [[menu.main]]
-    name = "För Företag"
-    identifier = "for-foretag"
-    url = "/for-foretag/"
-    weight = 50
+    [[languages.sv.menu.main]]
+      name = "För Alumni"
+      identifier = "for-alumni"
+      url = "/for-alumni/"
+      weight = 40
+
+    [[languages.sv.menu.main]]
+      name = "För Företag"
+      identifier = "for-foretag"
+      url = "/for-foretag/"
+      weight = 50
+
+  [languages.en]
+    title = "IN Chapter"
+    languageName = "English"
+    weight = 2
+    contentDir = "content/english"
+
+    [[languages.en.menu.main]]
+      name = "The Chapter"
+      identifier = "chapter"
+      url = "/chapter/"
+      weight = 10
+
+    [[languages.en.menu.main]]
+      name = "For students"
+      identifier = "for-students"
+      url = "/for-students/"
+      weight = 20
+
+    [[languages.en.menu.main]]
+      name = "Calendar"
+      identifier = "calendar"
+      url = "/calendar/"
+      weight = 30
+
+    [[languages.en.menu.main]]
+      name = "For Alumni"
+      identifier = "for-alumni"
+      url = "/for-alumni/"
+      weight = 40
+
+    [[languages.en.menu.main]]
+      name = "For companies"
+      identifier = "for-companies"
+      url = "/for-companies/"
+      weight = 50

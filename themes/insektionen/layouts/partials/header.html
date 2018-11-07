@@ -3,75 +3,28 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <title>Sektionen för Informations- och Nanoteknik</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>{{ .Site.Title }}</title>
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/bootstrap-mod.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link rel="icon" href="/img/favicon.png" type="image/x-icon">
-    <style>
-        #googleMap {
-            width: 100%;
-            /* Span the entire width of the screen */
-            height: 400px;
-            /* Set the height to 400 pixels */
-        }
-
-        .main {
-            max-width: 1000px;
-        }
-
-        @media (max-width: 991px) {
-            .row {
-                max-width: 500px;
-                margin: auto;
-            }
-        }
-
-        .col-centered{
-            float: none;
-            margin: 0 auto;
-        }
-
-    </style>
 </head>
-<body>
-    <div id="fb-root"></div>
-    <script>
-        (function(d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s);
-            js.id = id;
-            js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.10';
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-
-    </script>
-    <nav class="navbar navbar-in navbar-fixed-top" style="box-shadow: 0px 0px 20px 1px  #000;">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-                <a class="navbar-brand" href="/"><img src="/img/Logo%20IN%20Monokrom%20Svart.png" height="25px"></a>
-            </div>
-            <div class="collapse navbar-collapse" id="myNavbar">
-                <ul class="nav navbar-nav">
-                    {{ $currentPage := . }}
-                    {{ range .Site.Menus.main }}
-                        <li>
-                            <a class="{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}" href="{{ .URL }}" title="{{ .Title }}">
-                                {{ .Name }}
-                            </a>
-                        </li>
-                    {{ end }}
-                </ul>
-            </div>
-        </div>
+<body class="preload">
+    <nav id="nav">
+        <a id="logo"><img src="/img/Logo-IN-Monokrom-Svart.png" height="30"/></a>
+        <ul>
+            {{ $currentPage := . }}
+            {{ range .Site.Menus.main }}
+                <li>
+                    <a class="{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}current{{end}}" href="{{ .URL }}" title="{{ .Title }}">
+                        {{ .Name }}
+                    </a>
+                </li>
+            {{ end }}
+            <li id="languagePicker">
+                <a href="/en" title="Language">In English</a>
+            </li>
+        </ul>
     </nav>

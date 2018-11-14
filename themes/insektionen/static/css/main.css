@@ -103,6 +103,27 @@ body {
 }
 /* END NAV */
 
+/* START BANNER */
+
+#banner {
+    position: relative;
+    background-image: url("/img/electrum_entrance.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+    /*padding: 11em 0;*/
+}
+
+#banner .content {
+    position: relative;
+    text-align: center;
+    padding: 4em 0 3.5em 0;
+    background:rgba(255,255,255,0.8);
+}
+
+/* END BANNER */
+
 /* START MD SCREENS */
 @media screen and (max-width: 980px) {
     #nav {

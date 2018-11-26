@@ -23,8 +23,17 @@
                     </a>
                 </li>
             {{ end }}
+
+            {{ if .Site.IsMultiLingual }}
             <li id="languagePicker">
-                <a href="/en" title="Language">In English</a>
+                {{ range .Site.Languages }}
+                    {{ if ne . $.Site.Language }}
+                        {{ range $.Translations }}
+                        <a href="{{ .Permalink }}" title="Language">{{i18n "switchLanguage"}}</a>
+                        {{ end }}
+                    {{ end }}
+                {{ end }}
             </li>
+            {{ end }}
         </ul>
     </nav>

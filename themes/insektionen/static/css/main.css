@@ -105,6 +105,17 @@ body {
 
 /* START BANNER */
 
+.col-2 {
+    width: 50%;
+    float:left;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
 #banner {
     position: relative;
     background-image: url("/img/electrum_entrance.jpg");
@@ -112,14 +123,29 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     z-index: 1;
-    /*padding: 11em 0;*/
 }
 
 #banner .content {
     position: relative;
-    text-align: center;
-    padding: 4em 0 3.5em 0;
-    background:rgba(255,255,255,0.8);
+    padding: 3em 2em 3em 2em;
+    background:rgba(255,255,255,0.85);
+    text-align:center;
+}
+
+#indexLogo {
+    width: 100%;
+    max-width: 20em;
+}
+
+#indexNews {
+    text-align: left;
+    padding: 0 0 0 2em;
+}
+
+#indexNews .title {
+    text-decoration: underline;
+    font-style: italic;
+    font-size: 32px;
 }
 
 /* END BANNER */
@@ -128,6 +154,11 @@ body {
 @media screen and (max-width: 980px) {
     #nav {
         display: none;
+    }
+
+    .col-2 {
+        width: 100%;
+        float:left;
     }
     
     body {
@@ -344,11 +375,6 @@ body {
     background-color: #ffffff;
     /* White */
     color: #555555;
-}
-
-.electrum-img {
-    width: 500px;
-    margin-top: 80px;
 }
 
 .img-responsive {

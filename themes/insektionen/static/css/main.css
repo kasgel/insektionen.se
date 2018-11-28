@@ -143,13 +143,31 @@ body {
 
 #indexNews {
     text-align: left;
-    padding: 0 0 0 2em;
+    padding: 0.5em 1em 0.5em 2em;
+    background-color: rgba(0,0,0,.5);
+    color: white;
 }
 
 #indexNews .title {
     text-decoration: underline;
-    font-style: italic;
+    /*font-style: italic;*/
     font-size: 32px;
+}
+
+#indexNews ul {
+    list-style-type: none;
+    padding-left:0;
+}
+
+#indexNews ul li {
+
+}
+
+#indexNews ul li a {
+    text-decoration:none;
+    color:white;
+    font-weight:800;
+    display:block;
 }
 
 /* END BANNER */
@@ -273,7 +291,7 @@ body {
         top: 0;
         width: 275px;
         z-index: 10002;
-        background-color: #353c37;
+        background-color: #607990;
         background-image: url("images/overlay.png"), -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
         background-image: url("images/overlay.png"), -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
         background-image: url("images/overlay.png"), -ms-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));

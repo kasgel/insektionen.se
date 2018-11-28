@@ -3,12 +3,25 @@
     <section id="banner">
         <div class="content row">
             <div class="col-2">
-                <img id="indexLogo" src="img/Logo-IN-2400px-shadow.png">
+                <img id="indexLogo" src="/img/Logo-IN-2400px-shadow.png">
                 <h3>{{i18n "indexTitle"}}</h3>
             </div>
             <div class="col-2">
                 <div id="indexNews">
                     <h2 class="title">{{i18n "indexNews"}}</h2>
+                    <ul>
+                        {{ with first 5 .Site.Pages.ByPublishDate.Reverse }}
+                        {{ range $index, $e := . }}
+                        <li>
+                            <a href="{{ .Permalink }}">{{ .Title }}</a>
+                            <span class="date">{{ .Date.Day }} {{ index $.Site.Data.swedishDates (printf "%d" .Date.Month) }} {{ .Date.Year }}</span>
+                        </li>
+                        {{ if ne (add $index 1) 5}}
+                        <hr/>
+                        {{ end }}
+                        {{ end }}
+                        {{ end }}
+                    </ul>
                 </div>
             </div>
         </div>

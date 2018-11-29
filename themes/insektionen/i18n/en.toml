@@ -9,3 +9,12 @@ other = "News"
 
 [switchLanguage]
 other = "PÅ SVENSKA"
+
+[theChapter]
+other = "The Chapter"
+
+[theChapterDesc]
+other = "Something about the chapter...."
+
+[contact]
+other = "Kontakt"

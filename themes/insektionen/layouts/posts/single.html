@@ -1,0 +1,20 @@
+{{ partial "header.html" . }}
+<div class="container">
+    <div class="pageHeading">
+        <h1>{{ .Title }}</h1>
+        <p>
+            <b>{{i18n "published"}}:</b> {{ .Date.Day }} {{ index $.Site.Data.swedishDates (printf "%d" .Date.Month) }} {{ .Date.Year }} | 
+            <b>{{i18n "categories"}}: </b> {{ range $c := .Params.Categories}} {{ $c }} {{ end }}
+        </p>
+    </div>
+    <div class="main">
+        <div class="content row">
+            <div class="row">
+                <div class="col-md-8 col-centered">
+                        {{ partial "markdownExtension.html" . }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{ partial "footer.html" . }}

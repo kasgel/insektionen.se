@@ -21,36 +21,39 @@
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBPUk_yEdNQ3erC47EMLKgqCIsLTzVPr5Y&callback=myMap"></script>
     -->
         <footer class="alert-dark">
-            <h3>{{ i18n "contact" }}</h3>
-            <div class="">
-                <p>
-                    Sektionen för Informations- och Nanoteknik <br> Electrum 210 <br> 164 40 Kista
-                </p>
-                <p>
-                    <b>Besöksadress:</b> Electrum, Kistagången 16, Kista <br>
-                    <b>Leveranser:</b> Isafjordsgatan 18, Kista
-                </p>
-                <br>
-                <p>
-                    <b>Ordförande:</b> Patrik Karlstén <br>
-                    <b>E-post:</b> <a href="mailto:ordf@insektionen.se">ordf@insektionen.se</a>
-                </p>
-                <p>
-                    <b>Kommunikationsansvarig:</b> Erik Pettersson <br> E-post: <a href="mailto:kommunikation@insektionen.se">kommunikation@insektionen.se</a>
-                </p>
-                <p>
-                    <b>Näringslivsansvarig:</b> Celine Mileikowsky <br>
-                    <b>E-post:</b> <a href="mailto:naringsliv@insektionen.se">naringsliv@insektionen.se</a>
-                </p>
-                <br>
+            <h2>{{ i18n "contact" }}</h2>
+            <div class="col-2">
+                <ul class="noStyle noPadding">
+                    {{ range $el := .Site.Params.Contact.Info}}
+                    <li>{{ $el }}</li>
+                    {{ end }}
+                </ul>
+                <ul class="noStyle noPadding">
+                    <li><b>{{ i18n "contactVisitAddress" }}:</b> {{ .Site.Params.Contact.VisitingAddress }}</li>
+                    <li><b>{{ i18n "contactDeliveryAddress" }}:</b> {{ .Site.Params.Contact.DeliveryAddress }}</li>
+                </ul>
+            </div>
+            <div class="col-2">
+                <ul class="noStyle noPadding">
+                    <li><b>{{ i18n "contactPresident" }}:</b> {{ .Site.Params.Contact.People.PresidentPerson }}</li>
+                    <li><b>{{ i18n "contactEmail" }}:</b> <a href="mailto:{{ .Site.Params.Contact.People.PresidentEmail }}">{{ .Site.Params.Contact.People.PresidentEmail }}</a></li>
+                </ul>
+                <ul class="noStyle noPadding">
+                    <li><b>{{ i18n "contactCommunicationsPerson" }}:</b> {{ .Site.Params.Contact.People.CommunicationsPerson }}</li>
+                    <li><b>{{ i18n "contactEmail" }}:</b> <a href="mailto:{{ .Site.Params.Contact.People.CommunicationsEmail }}">{{ .Site.Params.Contact.People.CommunicationsEmail }}</a></li>
+                </ul>
+                <ul class="noStyle noPadding">
+                    <li><b>{{ i18n "contactBusinessPerson" }}:</b> {{ .Site.Params.Contact.People.BusinessPerson }}</li>
+                    <li><b>{{ i18n "contactEmail" }}:</b> <a href="mailto:{{ .Site.Params.Contact.People.BusinessEmail }}">{{ .Site.Params.Contact.People.BusinessEmail }}</a></li>
+                </ul>
             </div>
             
         </footer>
     </body>
-    {{ $dropotron := resources.Get "js/jquery.dropotron.min.js" }}
-    {{ $breakpoints := resources.Get "js/breakpoints.min.js" }}
-    {{ $utils := resources.Get "js/utils.js" }}
-    {{ $main := resources.Get "js/main.js" }}
-    {{ $js := slice $dropotron $breakpoints $utils $main | resources.Concat "js/bundle.js" }}
-    <script type="text/javascript" src="{{ $js.Permalink }}"></script>
+    {{ $dropotron := resources.Get "js/jquery.dropotron.min.js" | minify }}
+    {{ $breakpoints := resources.Get "js/breakpoints.min.js" | minify }}
+    {{ $utils := resources.Get "js/utils.js" | minify }}
+    {{ $main := resources.Get "js/main.js" | minify }}
+    {{ $js := slice $dropotron $breakpoints $utils $main | resources.Concat "js/bundle.js" | resources.Fingerprint "sha512" }}
+    <script type="text/javascript" src="{{ $js.Permalink }}" integrity="{{ $js.Data.Integrity }}"></script>
 </html>

@@ -10,11 +10,32 @@ other = "News"
 [switchLanguage]
 other = "PÅ SVENSKA"
 
-[theChapter]
+[aboutChapter]
 other = "The Chapter"
 
-[theChapterDesc]
-other = "Something about the chapter...."
-
 [contact]
-other = "Kontakt"
+other = "Contact"
+
+[contactVisitAddress]
+other = "Visiting address"
+
+[contactDeliveryAddress]
+other = "Deliveries"
+
+[contactPresident]
+other = "President"
+
+[contactEmail]
+other = "Email"
+
+[contactCommunicationsPerson]
+other = "Communications responsible"
+
+[contactBusinessPerson]
+other = "Business responsible"
+
+[published]
+other = "Published"
+
+[categories]
+other = "Categories"

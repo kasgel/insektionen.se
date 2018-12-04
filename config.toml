@@ -1,5 +1,5 @@
 baseURL = "https://insektionen.kasgel.fi"
-languageCode = "sv-SE"
+languageCode = "sv"
 theme = "insektionen"
 title = "Insektionen"
 copyright = "IN-sektionen"
@@ -11,6 +11,24 @@ anchor = "smart"
 
 # Multilingual mode
 DefaultContentLanguage = "sv"
+
+[taxonomies]
+  category = "kategorier"
+
+[params]
+  [params.contact]
+    # Each element in the info array is printed on its own row in footer
+    info = ["Sektionen för Informations- och Nanoteknik", "Electrum 210", "164 40 Kista"]
+    visitingAddress = "Electrum, Kistagången 16, Kista"
+    deliveryAddress = "Isafjordsgatan 18, Kista"
+  [params.contact.people]
+    presidentPerson = "Sebastian Porling"
+    presidentEmail = "ordf@insektionen.se"
+    communicationsPerson = "Emma Good"
+    communicationsEmail = "kommunikation@insektionen.se"
+    businessPerson = "Celine Mileikowsky"
+    businessEmail = "naringsliv@insektionen.se"
+
 [languages]
   [languages.sv]
     title = "IN-Sektionen"

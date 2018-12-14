@@ -15,14 +15,22 @@
 </head>
 <body class="preload">
     <nav id="nav">
-        <a id="logo"><img src="/img/Logo-IN-Monokrom-Svart.png" height="30"/></a>
+        <a id="logo" href="/"><img src="/img/Logo-IN-Monokrom-Svart.png" height="30"/></a>
+        </a>
         <ul>
             {{ $currentPage := . }}
             {{ range .Site.Menus.main }}
-                <li>
-                    <a class="{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}current{{end}}" href="{{ .URL }}" title="{{ .Title }}">
+                <li class="{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}current{{end}}">
+                    <a href="{{ .URL }}" title="{{ .Title }}">
                         {{ .Name }}
                     </a>
+                    {{ if .HasChildren }}
+                        {{ range .Children }}
+                        <ul>
+                            <li><a href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a></li>
+                        </ul>
+                        {{ end }}
+                    {{ end }}
                 </li>
             {{ end }}
 

@@ -14,7 +14,7 @@
                         {{ with first 5 .Site.Pages.ByPublishDate.Reverse }}
                         {{ range $index, $e := . }}
                         <li>
-                            <a href="{{ .Permalink }}">{{ .Title }}</a>
+                            <a href="{{ .Permalink }}">{{ .Title }} »</a>
                             <span class="date">{{ .Date.Day }} {{ index $.Site.Data.swedishDates (printf "%d" .Date.Month) }} {{ .Date.Year }}</span>
                         </li>
                         {{ if ne (add $index 1) 5}}
@@ -23,6 +23,9 @@
                         {{ end }}
                         {{ end }}
                     </ul>
+                    <div class="text-center">
+                        <a href="posts" id="moreNews">{{ i18n "moreNews" }} »</a>
+                    </div>
                 </div>
             </div>
         </div>

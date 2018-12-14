@@ -39,3 +39,12 @@ other = "Publicerat"
 
 [categories]
 other = "Kategori"
+
+[moreNews]
+other = "Mer nyheter"
+
+[newsReadMore]
+other = "Läs mer"
+
+[listPosts]
+other = "Nyhetsarkiv"

@@ -43,9 +43,22 @@ DefaultContentLanguage = "sv"
       weight = 10
 
     [[languages.sv.menu.main]]
+      parent = "sektionen"
+      name = "Om"
+      identifier = "om-sektionen"
+      url = "/sektionen/"
+      weight = 10
+
+    [[languages.sv.menu.main]]
       name = "För studenter"
       identifier = "for-studenter"
       url = "/for-studenter/"
+      weight = 20
+    [[languages.sv.menu.main]]
+      parent = "for-studenter"
+      name = "Bli medlem"
+      identifier = "bli-medlem"
+      url = "http://ths.kth.se/om-ths/bli-medlem-become-a-member/"
       weight = 20
 
     [[languages.sv.menu.main]]

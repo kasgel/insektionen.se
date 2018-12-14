@@ -39,3 +39,12 @@ other = "Published"
 
 [categories]
 other = "Categories"
+
+[moreNews]
+other = "More news"
+
+[newsReadMore]
+other = "Read more"
+
+[listPosts]
+other = "News archive"

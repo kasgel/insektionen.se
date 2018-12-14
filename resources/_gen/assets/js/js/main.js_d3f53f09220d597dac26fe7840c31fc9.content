@@ -1,6 +1,6 @@
 (function($){var $win=$(window),$body=$('body'),$nav=$("#nav");breakpoints({xlarge:['1281px','1680px'],large:['981px','1280px'],medium:['737px','980px'],small:['361px','736px'],xsmall:[null,'360px']});$win.on('load',function(){window.setTimeout(function(){$body.removeClass("preload");},100);});$('#nav > ul').dropotron({mode:'fade',noOpenerFade:true,speed:300,alignment:'center'});$('<div id="titleBar">'+
 '<a href="#navPanel" class="toggle"></a>'+
-'<span class="title">INSEKTIONEN</span>'+
+'<a class="title" href="/">INSEKTIONEN</a>'+
 '</div>').appendTo($body);$('<div id="navPanel">'+
 '<nav>'+
 $('#nav').navify()+

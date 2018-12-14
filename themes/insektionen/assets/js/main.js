@@ -32,7 +32,7 @@
     $(
         '<div id="titleBar">' +
             '<a href="#navPanel" class="toggle"></a>' +
-            '<span class="title">INSEKTIONEN</span>' +
+            '<a class="title" href="/">INSEKTIONEN</a>' +
         '</div>'
     )
         .appendTo($body);

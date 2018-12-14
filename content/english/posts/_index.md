@@ -1,4 +1,4 @@
 ---
-title: "Nyhetsarkiv"
+title: "All news"
 layout: "list-posts"
 ---
